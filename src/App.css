@@ -1,0 +1,306 @@
+#root {
+  margin: 0 auto;
+  padding: 0rem;
+  text-align: center;
+}
+body {
+  margin: 0; 
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.mainContent {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  /* CSS rules for desktop screens */
+}
+
+/* Tablet styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #root {
+    padding: 1rem;
+  }
+  /* CSS rules for tablet screens */
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  /* CSS rules for mobile screens */
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+.App {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: min-content auto auto;
+  grid-template-areas:
+    "header"
+    "nav"
+    "content"
+    "main";
+}
+
+@media only screen and (min-width: 600px) {
+  .App {
+    grid-template-columns: 25% 75%;
+    grid-template-rows: min-content auto;
+    grid-template-areas:
+      "header header"
+      "nav content";
+  }
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: lightblue;
+}
+.header h1 {
+  color: #333;
+}
+.navbar {
+  position: fixed;
+  margin-left: 0;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background-color: green;
+}
+
+.mainContent {
+  background-color: antiquewhite;
+  margin-top: 80px;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: green;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav a {
+  padding-right: 4rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+}
+nav {
+  text-align: center;
+
+  justify-content: space-between;
+
+  padding: 20px;
+  padding-left: 25rem;
+
+  width: 100%;
+}
+.navbar_link:hover {
+  color: #333;
+  cursor: pointer;
+}
+.articles_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 50px;
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 1300px;
+  width: 100%;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.dateAndcomments {
+  color: grey;
+  font-size: small;
+  margin: 0;
+  width: 100%;
+}
+
+.author {
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(77, 77, 77);
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .articles_list {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+}
+
+.individual_container {
+  margin-top: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  align-content: center;
+  padding: 0;
+  text-align: justify;
+  max-width: fit-content;
+}
+.IndividualArticle {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.IndividualArticle img {
+  width: 100%;
+}
+
+.IndividualArticle h1 {
+  margin-bottom: 20px;
+  color: green;
+  font-size: 2em;
+}
+
+.IndividualArticle .dateAndcomments {
+  color: grey;
+  font-size: small;
+  text-align: left;
+}
+
+.IndividualArticle .author {
+  font-style: italic;
+  font-weight: bold;
+  text-align: left;
+  color: rgb(77, 77, 77);
+}
+.IndividualArticle p {
+  text-align: justify;
+}
+
+.IndividualArticle .commentsspan {
+  width: 200px;
+  font-size: large;
+  text-decoration: underline;
+  color: green;
+  font-weight: bold;
+  font-size: medium;
+
+  cursor: pointer;
+  text-align: left;
+}
+
+.IndividualArticle .commentsspan:hover {
+  color: blueviolet;
+}
+
+.article-content {
+  color: rgb(51, 51, 51);
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+.commentForm {
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.commentInput {
+  width: 100%;
+  height: 50px;
+  margin-right: 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.commentsContainer {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(202, 202, 202);
+}
+
+.commentsbody {
+  padding: 10px;
+  border: solid;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: green;
+  color: rgb(72, 72, 72);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.comments p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgb(104, 104, 104);
+}
+.votesUdate {
+  display: flex;
+}
+.votesUdate p {
+  font-size: medium;
+  color: rgb(87, 87, 87);
+}
+
+.voteButton {
+  font-size: 30px;
+
+  margin-right: 0.5rem;
+  background-color: white;
+  border: 0 solid white;
+}
+
+.comments {
+  width: 100%;
+  text-align: justify;
+  margin: 20px 0;
+  font-size: small;
+  color: rgb(104, 104, 104);
+}
+
+.comments .commentsspan {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.comments .commentsspan span {
+  text-decoration: underline;
+  color: green;
+  cursor: pointer;
+}
